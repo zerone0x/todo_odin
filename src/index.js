@@ -1,5 +1,5 @@
 
-
+require('./style.css');
 let alltodo = []
 let allproj = []
 let currenttab = 'inbox'
@@ -115,8 +115,8 @@ function displayAllProjs() {
     if (projectToUpdate) {
         // 更新项目实例的标题
         projectToUpdate.update(projtitle);
-        // 保存所有项目到 localStorage
-        saveProjs();
+        saveTodos();
+    
         // 重新渲染项目列表
         displayAllProjs();}
         }
